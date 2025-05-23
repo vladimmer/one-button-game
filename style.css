@@ -1,0 +1,54 @@
+/* Базовая стилизация */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+/* Экран с кнопкой */
+#game-container {
+  background-color: #00ff00;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кнопка */
+#start-button {
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+#start-button:hover {
+  transform: scale(1.05);
+}
+
+/* Экран "ты проиграл" */
+#lose-screen {
+  display: none;
+  background-color: black;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#lose-text {
+  color: #00ff00;
+  font-size: 3rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
